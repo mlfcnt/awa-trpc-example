@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink } from "@trpc/client";
 import "./App.css";
 import { trpc } from "./utils/trpc";
-import AWA from "./components/AWA";
+import { Mtvs } from "./components/mtvs";
 
 function App() {
   const [queryClient] = useState(() => new QueryClient());
@@ -23,7 +23,8 @@ function App() {
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
         <div className="App">
-          <AWA />
+          <h1>AWA</h1>
+          <Mtvs />
         </div>
       </QueryClientProvider>
     </trpc.Provider>
